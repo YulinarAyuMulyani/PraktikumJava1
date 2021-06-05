@@ -38,5 +38,6 @@ public static void main(String[] args){
 	System.out.println("Cantik          : " +cantik);	
 	
 	JOptionPane.showMessageDialog(null,"Hai, " +namaDepan +namaTengah +namaBelakang);
+	namaBelakang = JOptionPane.showInputDialog("Nama Belakang : ");
 }
 }
