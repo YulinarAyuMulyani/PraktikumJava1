@@ -1,3 +1,5 @@
+import java.util.Locale;
+
 public class Main {
     public static void main(String[] args) {
         String namaDepan = "Yulinar";
@@ -14,5 +16,25 @@ public class Main {
         boolean cantik = true;
         System.out.println(namaDepan + namaTengah + namaBelakang);
         System.out.println(uniskaString);
+
+        //operasi tipe string
+
+        String namaLengkap = namaDepan + " " + namaTengah + " " + namaBelakang;
+        System.out.println(namaLengkap.length());
+        System.out.println(namaLengkap.indexOf("NIS"));
+        System.out.println(namaLengkap.substring(5));
+        System.out.println(namaLengkap.substring(5,12));
+        //System.out.println(namaLengkap.replace( target: "Ay" , replacement: " Nia ") ;
+        //karena error target dan replacement , tidak bisa seperti regex
+        System.out.println(namaLengkap.toUpperCase());
+        System.out.println(namaLengkap.toLowerCase());
+        System.out.println(namaLengkap.charAt(6));
+
+        String[] namaArray = namaLengkap.split(" ");
+
+        for(String nama : namaArray){
+            System.out.println(nama);
+        }
+
     }
 }
