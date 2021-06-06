@@ -24,8 +24,7 @@ public class Main {
         System.out.println(namaLengkap.indexOf("NIS"));
         System.out.println(namaLengkap.substring(5));
         System.out.println(namaLengkap.substring(5,12));
-        //System.out.println(namaLengkap.replace( target: "Ay" , replacement: " Nia ") ;
-        //karena error target dan replacement , tidak bisa seperti regex
+        System.out.println(namaLengkap.replace( "Ayu" , " Nia ") );
         System.out.println(namaLengkap.toUpperCase());
         System.out.println(namaLengkap.toLowerCase());
         System.out.println(namaLengkap.charAt(6));
