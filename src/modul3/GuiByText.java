@@ -1,5 +1,7 @@
 package modul3;
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GuiByText extends JFrame {
     JLabel label1 = new JLabel("Coba Input 1");
@@ -27,5 +29,13 @@ public class GuiByText extends JFrame {
         guiByText.meletakkanKompunen();
         guiByText.setVisible(true);
     }
-
+    void menambahkanListener(){
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                String nama = textField1.getText();
+                JOptionPane.showMessageDialog(null,"Hai" + nama);
+            }
+        });
+    }
 }
