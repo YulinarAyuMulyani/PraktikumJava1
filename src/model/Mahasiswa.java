@@ -2,6 +2,7 @@ package model;
 
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Mahasiswa {
@@ -19,5 +20,19 @@ public class Mahasiswa {
 }
     void menyapa(){
     System.out.println("Hai nama aku : " + this.nama);
+}
+
+    int hitungUsia(){
+        Calendar tanggalLahir = Calendar.getInstance();
+        tanggalLahir.setTime(this.tanggalLahir);
+        Calendar hariIni = Calendar.getInstance();
+
+        int tahunTanggallahir = tanggalLahir.get(Calendar.YEAR);
+        int tahunHariIni = hariIni.get(Calendar.YEAR);
+        int selisihTahun = tahunHariIni - tahunTanggallahir;
+
+        return selisihTahun;
+
+
 }
 }

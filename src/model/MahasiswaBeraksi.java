@@ -20,19 +20,22 @@ public class MahasiswaBeraksi {
         System.out.println("NPM \t\t\t : " + mahasiswa.npm);
         System.out.println("Tanggal lahir \t : "+ simpleDateFormat.format(mahasiswa.tanggalLahir));
 
-        Mahasiswa mahasiswa2 = new Mahasiswa();
-        mahasiswa2.npm = "2010010126";
-        mahasiswa2.nama = "Mulyani";
-        //mahasiswa2.tanggalLahir = new Date();
-        mahasiswa2.tanggalLahir = simpleDateFormat.parse("15-02-1998");
-        System.out.println("Nama \t\t\t : " + mahasiswa2.nama);
-        System.out.println("NPM \t\t\t : " + mahasiswa2.npm);
-        System.out.println("Tanggal lahir \t : "+ simpleDateFormat.format(mahasiswa2.tanggalLahir));
-
         mahasiswa.tampilkanAtribut();
         mahasiswa.menyapa();
-        //Mahasiswa mahasiswa2 = new Mahasiswa();
-    }
+        System.out.println("Usiaku : " + mahasiswa.hitungUsia() + " tahun ");
 
+        Mahasiswa mahasiswa2 = new Mahasiswa();
+
+
+
+        //mahasiswa2.npm = "2010010126";
+       // mahasiswa2.nama = "Mulyani";
+        //mahasiswa2.tanggalLahir = new Date();
+       // mahasiswa2.tanggalLahir = simpleDateFormat.parse("15-02-1998");
+       // System.out.println("Nama \t\t\t : " + mahasiswa2.nama);
+        //System.out.println("NPM \t\t\t : " + mahasiswa2.npm);
+       // System.out.println("Tanggal lahir \t : "+ simpleDateFormat.format(mahasiswa2.tanggalLahir));
+        //Mahasiswa mahasiswa1 = new Mahasiswa();
+    }
 
 }
