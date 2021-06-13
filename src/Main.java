@@ -1,3 +1,5 @@
+import model.Mahasiswa;
+
 import java.util.Locale;
 
 public class Main {
@@ -35,5 +37,8 @@ public class Main {
             System.out.println(nama);
         }
 
+        Mahasiswa m1 = new Mahasiswa("2010010122","Pitung","07-07-1998");
+        m1.tampilkanAtribut();
+        System.out.println(m1.getNama());
     }
 }
