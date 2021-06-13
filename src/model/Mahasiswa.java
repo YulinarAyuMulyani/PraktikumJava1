@@ -10,6 +10,9 @@ public class Mahasiswa {
     String nama;
     Date tanggalLahir;
 
+    public Mahasiswa(String npm, String yuli, String s) {
+    }
+
     void tampilkanAtribut() {
     String polaTanggal = "dd-MM-yyyy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(polaTanggal);
@@ -22,16 +25,33 @@ public class Mahasiswa {
     System.out.println("Hai nama aku : " + this.nama);
 }
 
+    public Mahasiswa() {
+    }
+
+    public Mahasiswa(String npm, String nama, Date tanggalLahir) {
+        this.npm = npm;
+        this.nama = nama;
+        this.tanggalLahir = tanggalLahir;
+    }
+
     int hitungUsia(){
         Calendar tanggalLahir = Calendar.getInstance();
         tanggalLahir.setTime(this.tanggalLahir);
         Calendar hariIni = Calendar.getInstance();
 
-        int tahunTanggallahir = tanggalLahir.get(Calendar.YEAR);
-        int tahunHariIni = hariIni.get(Calendar.YEAR);
-        int selisihTahun = tahunHariIni - tahunTanggallahir;
-
+        int selisihTahun = hariIni.get(Calendar.YEAR) - tanggalLahir.get(Calendar.YEAR);
+        if (hariIni.get(Calendar.MONTH) < tanggalLahir.get(Calendar.MONTH)){
+            selisihTahun--;
+        }else {
+            if (hariIni.get(Calendar.MONTH)== tanggalLahir.get(Calendar.MONTH)
+            && hariIni.get(Calendar.DAY_OF_MONTH) < tanggalLahir.get(Calendar.DAY_OF_MONTH)){
+                selisihTahun--;
+            }
+        }
         return selisihTahun;
+        //int tahunTanggallahir = tanggalLahir.get(Calendar.YEAR);
+       // int tahunHariIni = hariIni.get(Calendar.YEAR);
+       // int selisihTahun = tahunHariIni - tahunTanggallahir;
 
 
 }
